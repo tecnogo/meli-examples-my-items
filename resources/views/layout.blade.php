@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-light" style="position: relative;">
-<a href="https://github.com/tecnogo/meli-examples-category-attr-form"
+<a href="https://github.com/tecnogo/meli-examples-my-items"
    target="_blank" style="position: absolute; left: 0; right: 0; z-index: 1; width: 200px;">
     <img width="149" height="149"
          src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149"
