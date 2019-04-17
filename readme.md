@@ -43,3 +43,10 @@ Generar el application key:
 ### Selfie
 
 <img src="http://i.imgur.com/kFCulwI.png"/>
+
+### Licencia
+
+© 2019 Valentin Starck <valentin.starck@gmail.com>
+
+Este proyecto está bajo licencia MIT. Para más información: [LICENSE](https://raw.githubusercontent.com/tecnogo/meli-examples-my-items/master/LICENSE)
+
