@@ -1,10 +1,11 @@
 {
     "name": "tecnogo/meli-examples-my-items",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "MeliSdk: Listado de publicaciones de usuario",
     "keywords": [
-        "framework",
-        "laravel"
+        "ejemplo",
+        "meli-sdk",
+        "mercadolibre"
     ],
     "license": "MIT",
     "require": {
@@ -12,7 +13,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^5.8",
         "laravel/tinker": "^1.0",
-        "tecnogo/laravel-meli-sdk": "@dev"
+        "tecnogo/laravel-meli-sdk": "dev-master"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -58,14 +59,5 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    },
-    "repositories": {
-        "dev-package": {
-            "type": "path",
-            "url": "../laravel-meli-sdk",
-            "options": {
-                "symlink": true
-            }
-        }
     }
 }

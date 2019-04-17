@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0688066a3c38f34d52565a8f90151e7a",
+    "content-hash": "5d6554b8d0a79b6fe1c8182d3c8ec60c",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -3645,12 +3645,17 @@
         },
         {
             "name": "tecnogo/laravel-meli-sdk",
-            "version": "9999999-dev",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tecnogo/laravel-meli-sdk.git",
+                "reference": "e36e615ec23902c5547a54a6e10e87bf9cc93f09"
+            },
             "dist": {
-                "type": "path",
-                "url": "../laravel-meli-sdk",
-                "reference": "331da05978af07938e520b4febf6e5ba6f283b7f",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/tecnogo/laravel-meli-sdk/zipball/e36e615ec23902c5547a54a6e10e87bf9cc93f09",
+                "reference": "e36e615ec23902c5547a54a6e10e87bf9cc93f09",
+                "shasum": ""
             },
             "require": {
                 "illuminate/events": "^5.8",
@@ -3674,6 +3679,7 @@
                     "Tecnogo\\LaravelMeliSdk\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3684,9 +3690,7 @@
                 }
             ],
             "description": "Laravel package for MeliSDK",
-            "transport-options": {
-                "symlink": true
-            }
+            "time": "2019-04-16T11:22:46+00:00"
         },
         {
             "name": "tecnogo/meli-sdk",
