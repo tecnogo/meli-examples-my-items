@@ -33,17 +33,31 @@ class HomeController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void
+     * @throws \Psr\SimpleCache\InvalidArgumentException
+     * @throws \Tecnogo\MeliSdk\Exception\ContainerException
+     * @throws \Tecnogo\MeliSdk\Exception\MissingConfigurationException
+     * @throws \Tecnogo\MeliSdk\Request\Exception\RequestException
+     */
     public function all()
     {
         try {
             $items = $this->createItemSearch()->get();
         } catch (\Exception $e) {
-            return abort(500, $e->getMessage());
+            abort(500, $e->getMessage());
         }
 
         return $this->table($items);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Psr\SimpleCache\InvalidArgumentException
+     * @throws \Tecnogo\MeliSdk\Exception\ContainerException
+     * @throws \Tecnogo\MeliSdk\Exception\MissingConfigurationException
+     * @throws \Tecnogo\MeliSdk\Request\Exception\RequestException
+     */
     public function active()
     {
         try {
@@ -55,6 +69,13 @@ class HomeController extends Controller
         return $this->table($items);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Psr\SimpleCache\InvalidArgumentException
+     * @throws \Tecnogo\MeliSdk\Exception\ContainerException
+     * @throws \Tecnogo\MeliSdk\Exception\MissingConfigurationException
+     * @throws \Tecnogo\MeliSdk\Request\Exception\RequestException
+     */
     public function paused()
     {
         try {
@@ -66,6 +87,14 @@ class HomeController extends Controller
         return $this->table($items);
     }
 
+    /**
+     * @param $items
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Psr\SimpleCache\InvalidArgumentException
+     * @throws \Tecnogo\MeliSdk\Exception\ContainerException
+     * @throws \Tecnogo\MeliSdk\Exception\MissingConfigurationException
+     * @throws \Tecnogo\MeliSdk\Request\Exception\RequestException
+     */
     private function table($items)
     {
         return view('dashboard', [
@@ -109,7 +138,6 @@ class HomeController extends Controller
             'permalink' => $item->permalink(),
             'sold_quantity' => $item->soldQuantity(),
             'thumbnail' => $item->thumbnail()
-
         ];
     }
 
@@ -180,5 +208,6 @@ class HomeController extends Controller
             ->orderBy('sold_quantity_desc')
             ->pageSize(static::PAGE_SIZE)
             ->page(request('page', 1));
+
     }
 }
